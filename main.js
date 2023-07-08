@@ -10,6 +10,11 @@ const input = document.querySelector("input");
 const addToArray = (e) => {
   e.preventDefault();
   if (input.value.length) {
+    for (advice of advices) {
+      if (advice === input.value) {
+        return;
+      }
+    }
     advices.push(input.value);
     alert(`dodano ${input.value}`);
   }
@@ -23,7 +28,7 @@ const cleanArray = (e) => {
 };
 
 const showAdvice = () => {
-  let index = Math.floor(Math.random() * advices.length);
+  const index = Math.floor(Math.random() * advices.length);
   if (advices.length) {
     document.querySelector("h1").textContent = advices[index];
   }
