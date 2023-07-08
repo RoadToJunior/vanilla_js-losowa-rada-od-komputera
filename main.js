@@ -22,6 +22,13 @@ const cleanArray = (e) => {
   alert("zresetowano możliwości!");
 };
 
+const showAdvice = () => {
+  let index = Math.floor(Math.random() * advices.length);
+  if (advices.length) {
+    document.querySelector("h1").textContent = advices[index];
+  }
+};
+
 addButton.addEventListener("click", addToArray);
 cleanButton.addEventListener("click", cleanArray);
 showAdivce.addEventListener("click", showAdvice);
