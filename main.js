@@ -2,8 +2,8 @@ let advices = ["walcz", "przemyśl to jeszcze raz"];
 
 const addButton = document.querySelector(".add");
 const cleanButton = document.querySelector(".clean");
-const showAdivce = document.querySelector(".showAdvice");
-const showOptions = document.querySelector(".showOptions");
+const showAdviceButton = document.querySelector(".showAdvice");
+const showOptionsButton = document.querySelector(".showOptions");
 
 const input = document.querySelector("input");
 
@@ -29,6 +29,11 @@ const showAdvice = () => {
   }
 };
 
+const showOptions = () => {
+  document.querySelector("h1").textContent = advices;
+};
+
 addButton.addEventListener("click", addToArray);
 cleanButton.addEventListener("click", cleanArray);
-showAdivce.addEventListener("click", showAdvice);
+showAdviceButton.addEventListener("click", showAdvice);
+showOptionsButton.addEventListener("click", showOptions);
