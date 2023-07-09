@@ -25,6 +25,7 @@ const cleanArray = (e) => {
   e.preventDefault();
   advices = ["walcz", "przemyśl to jeszcze raz"];
   alert("zresetowano możliwości!");
+  document.querySelector("h1").textContent = "";
 };
 
 const showAdvice = () => {
@@ -35,10 +36,19 @@ const showAdvice = () => {
 };
 
 const showOptions = () => {
-  document.querySelector("h1").textContent = advices;
+  document.querySelector("h1").textContent = alert(advices.join(", "));
 };
 
 addButton.addEventListener("click", addToArray);
 cleanButton.addEventListener("click", cleanArray);
 showAdviceButton.addEventListener("click", showAdvice);
 showOptionsButton.addEventListener("click", showOptions);
+
+//bonus - losowanie liczby w przedziale
+
+Math.random() * (6 - 4) + 4;
+
+const numberRandom = (min, max) => {
+  const number = Math.random() * (max - min) + min;
+  return number;
+};
