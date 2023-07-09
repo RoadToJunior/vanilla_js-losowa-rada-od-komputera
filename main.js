@@ -52,3 +52,9 @@ const numberRandom = (min, max) => {
   const number = Math.random() * (max - min) + min;
   return number;
 };
+
+//od do (liczba całkowita wlcizając najwyższą)
+
+const randomInt = (min, max) => {
+  const number = Math.random() * (max - min + 1) + min;
+};
